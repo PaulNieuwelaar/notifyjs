@@ -27,6 +27,7 @@
 */
 
 var Notify = Notify || {};
+var $ = $ || parent.$;
 
 Notify._notifications = [];
 Notify._TimeStamp = null;
@@ -35,11 +36,11 @@ Notify._crmFormHeaderId = "formHeaderContainer"; // This is probably the only th
 Notify._crmViewHeaderId = "crmContentPanel"; // And this, but it's cool
 
 // message = (optional) what is displayed in the notification bar
-// level = (optional) ERROR, WARNING, INFO, SUCCESS, or LOADING. If not included, no image will display
+// level = (optional) ERROR, WARNING, INFO, SUCCESS, QUESTION, or LOADING. If not included, no image will display
 // uniqueId = (optional) unique ID for this notification
 // buttons = (optional) array of objects, each object must have a 'text' attrbute, a 'callback' function attribute, and a 'type' attribute of 'link' or 'button'
 // durationSeconds = (optional) after how long should the notification disappear
-Notify.add = function (message, level, uniqueId, buttons, durationSeconds) {
+Notify.add = function (message, level, uniqueId, buttons, durationSeconds) {  
     if (!Notify._initialised) {
         var $notify = $("<div>", { id: "notifyWrapper" });
         $notify.append($("<div>", { id: "notify", class: "notify", size: "3", maxheight: "51", class: "notify" }).css("display", "block"));
@@ -49,13 +50,22 @@ Notify.add = function (message, level, uniqueId, buttons, durationSeconds) {
         if ($header.length > 0) {
             $header.append($notify);
         }
-
-        // If not form header, might be a view, so try get the view header
+        
         if ($header.length == 0) {
             $ = parent.$;
-            $header = $("#" + Notify._crmViewHeaderId);
+
+            // Try get the form header again (2015 SP1)
+            var $header = $("#" + Notify._crmFormHeaderId);
             if ($header.length > 0) {
-                $header.prepend($notify);
+                $header.append($notify);
+            }
+
+            // If not form header, might be a view, so try get the view header
+            if ($header.length == 0) {
+                $header = $("#" + Notify._crmViewHeaderId);
+                if ($header.length > 0) {
+                    $header.prepend($notify);
+                }
             }
         }
 
@@ -68,7 +78,7 @@ Notify.add = function (message, level, uniqueId, buttons, durationSeconds) {
         }
         else {
             // Broken most likely from a rollup/update - just need to find the new header ID (hopefully)
-            console.log("Notify: CRM header element: '" + mBar._crmHeaderId + "' does not exist.");
+            console.log("Notify: CRM header element: '" + Notify._crmHeaderId + "' does not exist.");
             return;
         }
     }
