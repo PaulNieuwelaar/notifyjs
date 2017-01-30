@@ -30,8 +30,9 @@ var Notify = Notify || {};
 var $ = $ || parent.$;
 
 Notify._notifications = [];
-Notify._TimeStamp = null;
+Notify._timeStamp = null;
 Notify._initialised = false;
+Notify._prefix = "mag_"; // Change this if you have your own solution prefix (as long as the file structure's the same)
 Notify._crmFormHeaderId = "formHeaderContainer"; // This is probably the only thing "unsupported"
 Notify._crmViewHeaderId = "crmContentPanel"; // And this, but it's cool
 
@@ -40,7 +41,7 @@ Notify._crmViewHeaderId = "crmContentPanel"; // And this, but it's cool
 // uniqueId = (optional) unique ID for this notification
 // buttons = (optional) array of objects, each object must have a 'text' attrbute, a 'callback' function attribute, and a 'type' attribute of 'link' or 'button'
 // durationSeconds = (optional) after how long should the notification disappear
-Notify.add = function (message, level, uniqueId, buttons, durationSeconds) {  
+Notify.add = function (message, level, uniqueId, buttons, durationSeconds) {
     if (!Notify._initialised) {
         var $notify = $("<div>", { id: "notifyWrapper" });
         $notify.append($("<div>", { id: "notify", class: "notify", size: "3", maxheight: "51", class: "notify" }).css("display", "block"));
@@ -50,7 +51,7 @@ Notify.add = function (message, level, uniqueId, buttons, durationSeconds) {
         if ($header.length > 0) {
             $header.append($notify);
         }
-        
+
         if ($header.length == 0) {
             $ = parent.$;
 
@@ -72,7 +73,7 @@ Notify.add = function (message, level, uniqueId, buttons, durationSeconds) {
         if ($header.length > 0) {
             // Load the style sheet
             var baseUrl = Xrm.Page.context.getClientUrl();
-            $("<link/>", { rel: "stylesheet", href: baseUrl + "/WebResources/mag_/css/notify.css" }).appendTo('head');
+            $("<link/>", { rel: "stylesheet", href: baseUrl + "/WebResources/" + Notify._prefix + "/css/notify.css" }).appendTo('head');
 
             Notify._initialised = true;
         }
@@ -145,9 +146,9 @@ Notify.add = function (message, level, uniqueId, buttons, durationSeconds) {
     // If there's a timeout specified, wait and then remove this notification
     if (durationSeconds && durationSeconds > 0) {
         var timeStamp = new Date();
-        Notify._TimeStamp = timeStamp; // Timestamp prevents mutliple presses
+        Notify._timeStamp = timeStamp; // Timestamp prevents mutliple presses
         setTimeout(function () {
-            if (timeStamp == Notify._TimeStamp) {
+            if (timeStamp == Notify._timeStamp) {
                 Notify.remove(uniqueId);
             }
         }, durationSeconds * 1000);
@@ -180,7 +181,7 @@ Notify.remove = function (uniqueId) {
             }
         }
         Notify._notifications = tempNotifications;
-        
+
         if (Notify._notifications.length == 0) {
             // If that was the last notification hide the notify wrapper
             $("#notifyWrapper").slideUp(500, function () {

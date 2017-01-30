@@ -3,11 +3,11 @@
 }
 
 .notify-button {
-    padding: 2px 8px;
+    padding: 3px 15px;
     border: 1px solid #D7D889;
     height: 12px;
     color: #444444 !important;
-    margin-left: 5px;
+    margin-left: 10px;
     background-color: #FFFFFF;
 }
 
@@ -17,7 +17,7 @@
     }
 
 .notify-link {
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 .notify-notification a {
@@ -37,7 +37,7 @@
 }
 
 .notify-notification {
-    padding: 2px 0;
+    padding: 3px 0;
     font-size: 8pt;
     color: #000000;
 }
