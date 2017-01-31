@@ -1,3 +1,5 @@
+// Notify.js v1.1 - Copyright Paul Nieuwelaar Magnetism 2016
+
 /*
     // Add a notification with a button and a link (inline html in the message too)
     Notify.add("Would you like to create a new <b>Sale</b>?", "QUESTION", "sale",
