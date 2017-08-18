@@ -64,3 +64,6 @@ Notify.remove("sale");
 // Remove all notifications
 Notify.remove();
 ```
+
+Created by [Paul Nieuwelaar](http://paulnieuwelaar.wordpress.com) - [@paulnz1](https://twitter.com/paulnz1)  
+Sponsored by [Magnetism Solutions - Dynamics CRM Specialists](http://www.magnetismsolutions.com)
