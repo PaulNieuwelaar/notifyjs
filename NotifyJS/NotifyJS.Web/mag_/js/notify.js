@@ -1,4 +1,5 @@
 // Notify.js v1.1 - Copyright Paul Nieuwelaar Magnetism 2016
+// Download the latest version from https://github.com/PaulNieuwelaar/notifyjs
 
 /*
     // Add a notification with a button and a link (inline html in the message too)
