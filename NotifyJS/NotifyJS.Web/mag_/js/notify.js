@@ -163,17 +163,15 @@ Notify.remove = function (uniqueId) {
         }
         Notify._notifications = tempNotifications;
 
-        if (Notify._notifications.length == 0) {
-            // If that was the last notification hide the notify wrapper
-            Notify.$("#notifyWrapper").slideUp(500, function () {
-                // Delete the notification once hidden
-                Notify.$("#notifyNotification_" + uniqueId).remove();
-            });
-        }
-        else {
-            // Hide and Delete the element
-            Notify.$("#notifyNotification_" + uniqueId).slideUp(500, function () { Notify.$(this).remove(); });
-        }
+        // Hide and Delete the element
+        Notify.$("#notifyNotification_" + uniqueId).slideUp(500, function () { 
+            Notify.$(this).remove(); 
+
+            if (Notify._notifications.length == 0) {
+                // If that was the last notification hide the notify wrapper
+                Notify.$("#notifyWrapper").hide();
+            }
+        });
     }
 }
 
