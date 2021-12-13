@@ -1,5 +1,5 @@
 # Notify.js - CRM 2013-Dynamics 365 Custom Notifications in JavaScript
-[![download](https://user-images.githubusercontent.com/14048382/27844360-c7ea9670-6174-11e7-8658-80d356c1ba8f.png)](https://github.com/PaulNieuwelaar/notifyjs/releases/download/v1.1/NotifyJS_1_1_0_0.zip) (v1.1) [<img align="right" src="https://user-images.githubusercontent.com/14048382/29433676-4eb13ea6-83f4-11e7-8c07-eca514b1b197.png"/>](https://github.com/PaulNieuwelaar/notifyjs/wiki/Documentation)
+[![download](https://user-images.githubusercontent.com/14048382/27844360-c7ea9670-6174-11e7-8658-80d356c1ba8f.png)](https://github.com/PaulNieuwelaar/notifyjs/releases/download/v2.0/NotifyJS_2_0_0_managed.zip) (v2 managed) [<img align="right" src="https://user-images.githubusercontent.com/14048382/29433676-4eb13ea6-83f4-11e7-8c07-eca514b1b197.png"/>](https://github.com/PaulNieuwelaar/notifyjs/wiki/Documentation)
 
 ![](https://user-images.githubusercontent.com/14048382/29441236-e8e965b0-841d-11e7-9d96-06748f992dbd.PNG)
 
