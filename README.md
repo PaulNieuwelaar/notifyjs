@@ -22,7 +22,7 @@ Check the [Documentation](https://github.com/PaulNieuwelaar/notifyjs/wiki/Docume
 ## Add Notification
 Adds or overwrites a notification on the custom notification bar. Note that this notification bar is separate to the CRM Notification bar.
 
-Parameters: Message, Icon, Unique ID, Buttons (array), Duration (seconds - optional)
+Parameters: Message, Icon, Unique ID, Buttons (array), Duration (seconds - optional), Background Color, Text Color
 
 All parameters are _technically_ optional, if there's no icon specified the icon will be removed, if the unique ID is not specified, the ID will be null (and any new notifications with no ID will overwrite that one), the buttons are optional and will display after the message in the order they are added to the array, duration is optional, and if not specified the notification will only disappear if the user manually dismisses it or if other code removes it.
 
