@@ -1,4 +1,4 @@
-/* v2.0.0 | (c) Paul Nieuwelaar Magnetism Apps Limited | https://github.com/PaulNieuwelaar/notifyjs */
+/* v2.0.1 | (c) Paul Nieuwelaar Magnetism Apps Limited | https://github.com/PaulNieuwelaar/notifyjs */
 
 /*
     // Add a notification with a button and a link (inline html in the message too)
