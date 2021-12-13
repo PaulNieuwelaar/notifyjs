@@ -1,62 +1,77 @@
-﻿.notify-hide {
+/* v2.0.0 | (c) Paul Nieuwelaar Magnetism Apps Limited | https://github.com/PaulNieuwelaar/notifyjs */
+
+.notify-hide {
     display: none !important;
 }
 
 .notify-button {
-    padding: 3px 15px;
-    border: 1px solid #D7D889;
-    height: 12px;
-    color: #444444 !important;
+    padding: 2px 8px;
+    /*padding: 1px 8px;*/
     margin-left: 10px;
-    background-color: #FFFFFF;
+    border: 1px solid;
+    font-family: Segoe UI;
+    font-size: 13px !important;
 }
 
     .notify-button:hover {
-        background-color: #F0F0F0;
         text-decoration: none !important;
     }
 
 .notify-link {
+    font-size: 13px !important;
     margin-left: 10px;
 }
 
-.notify-notification a {
-    color: #0072C6;
-    cursor: pointer;
+.notify-notification {
+    padding: 5px !important;
+    /*padding: 3px !important;*/
 }
 
-    .notify-notification a:hover {
-        text-decoration: underline;
+    .notify-notification table {
+        height: 22px;
     }
 
-.notify {
-    padding: 3px 5px !important;
-    background-color: #FFF19D;
-    border: 1px solid #DDDDDD;
-    overflow: auto;
-}
+    .notify-notification td {
+        font-size: 13px !important;
+    }
 
-.notify-notification {
-    padding: 3px 0;
-    font-size: 8pt;
-    color: #000000;
+    .notify-notification a {
+        cursor: pointer;
+        font-weight: 600 !important;
+        white-space: nowrap;
+    }
+
+        .notify-notification a:hover {
+            text-decoration: underline;
+        }
+
+.notify {
+    overflow: auto;
 }
 
 .notify-image {
     vertical-align: middle;
-    margin-left: 2px;
-    margin-right: 5px;
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     overflow: hidden;
+    margin: 1px;
+}
+
+.notify-text {
+    padding-left: 5px;
+    padding-top: 2px;
+}
+
+.notify-image-find {
+    background: transparent url(../img/notify.png) no-repeat scroll -120px 0px;
 }
 
 .notify-image-ques {
-    background: transparent url(../img/notify.png) no-repeat scroll -64px 0px;
+    background: transparent url(../img/notify.png) no-repeat scroll -100px 0px;
 }
 
 .notify-image-tick {
-    background: transparent url(../img/notify.png) no-repeat scroll -48px 0px;
+    background: transparent url(../img/notify.png) no-repeat scroll -80px 0px;
 }
 
 .notify-image-load {
@@ -64,22 +79,27 @@
 }
 
 .notify-image-info {
-    background: transparent url(../img/notify.png) no-repeat scroll -32px 0px;
+    background: transparent url(../img/notify.png) no-repeat scroll -60px 0px;
 }
 
 .notify-image-warn {
-    background: transparent url(../img/notify.png) no-repeat scroll -16px 0px;
+    background: transparent url(../img/notify.png) no-repeat scroll -40px 0px;
 }
 
 .notify-image-crit {
-    background: transparent url(../img/notify.png) no-repeat scroll 0px 0px;
+    background: transparent url(../img/notify.png) no-repeat scroll -20px 0px;
 }
 
 .notify-close {
     float: right;
     cursor: pointer;
-    width: 16px;
-    height: 16px;
-    background: transparent url(../img/notify.png) no-repeat scroll -80px 0px;
-    overflow: hidden;
+    width: 14px;
+    height: 24px;
+    margin-top: -11px;
+    font-size: 24px;
+    margin-right: 3px;
 }
+
+    .notify-close:hover {
+        text-decoration: none !important;
+    }
