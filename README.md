@@ -1,6 +1,8 @@
 # Notify.js - CRM 2013-Dynamics 365 Custom Notifications in JavaScript
 [![download](https://user-images.githubusercontent.com/14048382/27844360-c7ea9670-6174-11e7-8658-80d356c1ba8f.png)](https://github.com/PaulNieuwelaar/notifyjs/releases/download/v2.0.1/NotifyJS_2_0_1_managed.zip) (v2 managed) [<img align="right" src="https://user-images.githubusercontent.com/14048382/29433676-4eb13ea6-83f4-11e7-8c07-eca514b1b197.png"/>](https://github.com/PaulNieuwelaar/notifyjs/wiki/Documentation)
 
+# This solution is no longer maintained. You should instead use OOTB methods [addGlobalNotification](https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/reference/xrm-app/addglobalnotification) which provides similar functionality.
+
 ![](https://user-images.githubusercontent.com/14048382/29441236-e8e965b0-841d-11e7-9d96-06748f992dbd.PNG)
 
 ## Overview
